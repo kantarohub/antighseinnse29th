@@ -35,7 +35,7 @@
 <model-viewer 
     src="images/Antighseinse_29th_AR.glb" 
     ios-src="images/Antighseinse_29th_AR.usdz"
-    ar ar-modes="scene-viewer webxr quick-look"
+    ar ar-modes="webxr scene-viewer quick-look"
     orientation="0deg 0deg 180deg"
     auto-rotate camera-controls 
     loading="eager">
@@ -44,9 +44,13 @@
     </div>
 </model-viewer>
 
-     <footer>
-        <p>&copy; 2026 3i.野村貫太郎事務所</p>
+    <footer>
+    <p>&copy; <span id="current-year"></span> 3i.野村貫太郎事務所</p>
     </footer>
+
+    <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
