@@ -59,6 +59,7 @@ model-viewer {
     background-color: #000000;
     border-radius: 15px;   /* 角を少し丸く */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 影をつけて立体感を出す */
+    margin-bottom: 20px;   /* 下の要素との間隔を確保 */
 }
 
 /* スマホ（画面幅600px以下）用の微調整 */
@@ -72,14 +73,14 @@ model-viewer {
     }
 }
 
-/* --- 💡 追加：操作説明ガイドのスタイル --- */
+/* --- 💡 操作説明ガイドのスタイル --- */
 .guide-container {
     width: 90%;
     max-width: 800px;
     background-color: #f8f9fa; /* 薄いグレーの背景で区切る */
     border-radius: 12px;
     padding: 15px 20px;
-    margin-bottom: 20px; /* 3Dモデルとの間隔 */
+    margin-bottom: 20px; /* 下との間隔 */
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
 }
 
@@ -130,6 +131,57 @@ model-viewer {
 /* フッター */
 footer {
     margin-top: 30px;
+    margin-bottom: 20px;
     font-size: 0.8rem;
     color: #999;
+}
+
+
+/* ==========================================================================
+   追加：AR体験方法（手順）＆注意点セクションのスタイル
+   ========================================================================== */
+
+/* テキストエリアの横幅・配置を既存の操作ガイドと完全に統一 */
+.ar-steps, .ar-notes {
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 13px;
+    color: #cccccc; /* 黒背景で見えやすい明るいグレー */
+}
+
+/* 各ブロックの見出し：ネオンと同じテーマカラーのピンクを使用 */
+.ar-steps h3, .ar-notes h3 {
+    font-size: 14px;
+    color: #c217c8;
+    border-bottom: 1px solid #c217c8;
+    padding-bottom: 6px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* リストのインデントと行間をスッキリ調整 */
+.ar-steps ol, .ar-notes ul {
+    padding-left: 20px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* リスト項目間の適度な縦方向の余白 */
+.ar-steps li, .ar-notes li {
+    margin-bottom: 8px;
+}
+
+/* 太字を目立たせるために白に設定 */
+.ar-steps strong, .ar-notes strong {
+    color: #ffffff;
+}
+
+/* スマホ（画面幅600px以下）用の追加レスポンシブ調整 */
+@media (max-width: 600px) {
+    .ar-steps, .ar-notes {
+        width: 95%; /* 操作ガイドと同じく95%まで広げる */
+        font-size: 12px;
+    }
 }
